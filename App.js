@@ -1,13 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { FlagshipProvider } from '@flagship.io/react-native-sdk'
+import { Square } from './src/components/square'
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <FlagshipProvider
+      envId='ccgvh4qa87kg02re8jl0'
+      apiKey='DHiKxZFFFisUXMqwiWObkskOKQLRDrJBjNrTUIyI'
+      visitorData={{}}
+    >
+      <View style={styles.container}>
+        <Text>alouuuuu</Text>
+        <Square />
+        <StatusBar style="auto" />
+      </View>
+    </FlagshipProvider>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -17,4 +29,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
